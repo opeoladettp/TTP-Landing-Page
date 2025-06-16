@@ -1,0 +1,908 @@
+/* Add these styles to your assets/css/styles.css file */
+
+/* General adjustments (from previous response, ensure these are present) */
+* {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-brand-color: hsl(358, 77%, 50%);
+    --dark-primary-brand-color: hsl(358, 77%, 25%);
+    --light-primary-brand-color: hsl(358, 77%, 75%);
+    --sencondary-brand-color: hsl(0, 0%, 35%);
+    --dark-sencondary-brand-color: hsl(0, 0%, 20%);
+    --light-sencondary-brand-color: hsl(0, 0%, 50%);
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+body, p, a {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: poppins;
+}
+
+body, a {
+    color: hsl(0, 0%, 0%);
+}
+
+p {
+    color: hsl(0, 0%, 25%);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+a i:hover, a p:hover {
+    color: var(--primary-brand-color);
+}
+
+
+.header-1, h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 6rem;
+}
+
+.header-2, h2 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 5.25rem;
+}
+
+.header-3, h3 {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 4.5rem;
+}
+
+.sub-header-1, h4 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 3.75rem;
+    width: 70%;
+    text-align: center;
+    color: var(--sencondary-brand-color);
+}
+
+.sub-header-2, h5 {
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 3rem;
+    width: 70%;
+    text-align: center;
+    color: var(--sencondary-brand-color);
+}
+
+.sub-header-3, h6 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 2.25rem;
+    width: 70%;
+    text-align: center;
+    color: var(--sencondary-brand-color);
+}
+
+i {
+    color: black;
+    font-size: 1rem;
+}
+
+.btn {
+    padding: 16px 32px;
+    background: black;
+    color: white;
+}
+
+.btn:hover {
+    background: var(--primary-brand-color);
+    color: white;
+}
+
+.header-1, .header-2, .header-3 {
+    font-family: Paytone One;
+}
+
+.sub-header-1, .sub-header-2, .sub-header-3 {
+    font-family: JetBrains Mono;
+}
+
+.container {
+    width: 90vw;
+    padding: 0 5vw;
+    margin: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-header, .header {
+    width: 90vw;
+    padding: 10px 5vw;
+}
+
+.top-header {
+    background: hsl(0, 0%, 0%);
+    justify-content: space-evenly;
+}
+
+.top-header, .header-email, .header-info, .header-socials, .header, .brand, nav, ul {
+    display: flex;
+    align-items: center;
+}
+
+.header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    z-index: 1000;
+    box-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.1);
+}
+
+.header-email {
+    flex: 1;
+    justify-content: start;
+}
+
+.header-info {
+    flex: 2;
+    justify-content: center;
+}
+
+.header-socials {
+    flex: 1;
+    justify-content: end;
+}
+
+.top-header .header-email i {
+    margin-right: 0.5rem;
+}
+
+.top-header .header-info a {
+    margin-left: 0.5rem;
+    color: var(--primary-brand-color);
+}
+
+.top-header .header-info a:hover {
+    color: var(--light-primary-brand-color);
+}
+
+.top-header .header-socials i {
+    margin-left: 2rem;
+}
+
+.top-header a, .top-header p, .top-header i {
+    color: hsl(0, 0%, 100%);
+}
+
+.header {
+    width: 100%; /* Changed from 100 */
+    position: relative; /* Changed from sticky */
+    justify-content: space-between; /* Added for space between brand and nav/burger */
+}
+
+.brand img {
+    height: 75px;
+}
+
+/* Original flex for nav - will be overridden by media query */
+nav {
+    flex: 1;
+}
+
+nav ul {
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+nav ul li a:hover {
+    color: var(--primary-brand-color);
+}
+
+span.services {
+    color: white;
+}
+
+.services {
+    display: inline-block;
+    text-align: center;
+    background: var(--primary-brand-color);
+    border-radius: 48px;
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+/* New fade animation classes */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#hero {
+    background-image: url(../images/hero-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero h1 {
+    text-align: center;
+    color: var(--primary-brand-color);
+}
+
+#about {
+    height: 100vh;
+    background: silver;
+}
+
+.about {
+    display: flex;
+    border-radius: 48px;
+}
+
+.card-1 {
+    background-image: url();
+}
+
+.row, .col {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.col {
+    flex-direction: column;
+}
+
+#about h5, #about p {
+    text-align: left;
+    width: 100%;
+}
+
+#about h5.ttp {
+    color: var(--primary-brand-color);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+}
+
+#about h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 3.75rem;
+}
+
+#about a.btn {
+    align-self: start;
+}
+
+#about .img {
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: baseline;
+    background-image: url(../images/about-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 32px;
+}
+
+.about-info {
+    display: flex;
+    background: var(--primary-brand-color);
+    padding: 10px;
+    opacity: .75;
+    margin-top: 40vh;
+}
+
+#about .about-info h3 {
+    color: white;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+}
+
+#toTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--primary-brand-color);
+    cursor: pointer;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, opacity 0.3s;
+    opacity: 0.8;
+}
+
+#toTopBtn:hover {
+    background-color: var(--dark-primary-brand-color);
+    opacity: 1;
+}
+
+#toTopBtn i {
+    color: hsl(0, 0%, 100%);
+}
+
+.services-card-holder {
+    width: 100%;
+    border-radius: 96px;
+    display: flex;
+}
+
+.services-card-holder .card-1 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-image: url(../images/flight-bookings.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px hsla(0, 0%, 0%, 0.5);
+}
+
+.services-card-holder .card-2 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-image: url(../images/hotel-reservations.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px hsla(0, 0%, 0%, 0.5);
+}
+
+.services-card-holder .card-3 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-image: url(../images/travel-insurance.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px hsla(0, 0%, 0%, 0.5);
+}
+
+.services-card-holder .card-4 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-image: url(../images/car-hire.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px hsla(0, 0%, 0%, 0.5);
+}
+
+.services-card-holder .card-5 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 300px;
+    background-image: url(../images/visa-assistance.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px hsla(0, 0%, 0%, 0.5);
+}
+
+.services-card-holder h3 {
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+    text-align: left;
+    color: hsl(0, 0%, 100%);
+}
+
+.services-card-holder h5 {
+    font-size: 1.5rem;
+    line-height: 2.75rem;
+    text-align: left;
+    color: hsl(0, 0%, 75%);
+}
+
+.services-card-holder .card {
+    justify-content: end;
+    padding: 30px;
+}
+
+#contact .row {
+    align-items: start;
+    justify-content: start;
+}
+
+#contact .contact-details p, #contact .contact-details .contact-title, #contact .contact-details .contact-title h5 {
+    width: 100%;
+    text-align: left;
+}
+
+#contact .contact-details p {
+    margin-bottom: 24px;
+}
+
+#contact .contact-details .contact-title {
+    display: flex;
+    align-items: center;
+}
+
+#contact .contact-details i {
+    font-size: 1.5rem;
+    color: var(--primary-brand-color);
+    margin-right: 16px;
+}
+
+#contact .contact-details a:hover {
+    color: var(--primary-brand-color);
+}
+
+#contact .contact-details .contact-socials a i:hover {
+    color: var(--dark-primary-brand-color);
+}
+
+footer {
+    background: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+}
+
+footer .container {
+    margin-top: 50px;
+    margin-bottom: 16px;
+}
+
+.bottom-footer .col-1 {
+    align-items: start;
+}
+
+.bottom-footer {
+    border-top: 1px solid var(--sencondary-brand-color);
+    padding-top: 16px;
+    margin-top: 16px;
+}
+
+.bottom-footer .col-2 {
+    align-items: end;
+}
+
+.bottom-footer .col-2 i {
+    margin-right: 16px;
+}
+
+footer .header-socials i, footer p {
+    color: var(--sencondary-brand-color);
+}
+
+footer .header-socials i:hover {
+    color: var(--primary-brand-color);
+}
+
+footer .top-footer .col {
+    align-items: start;
+}
+
+footer .top-footer .row {
+    align-items: start;
+}
+
+footer .top-footer .col {
+    align-items: start;
+}
+
+footer .top-footer .col-1 img {
+    height: 100px;
+}
+
+footer .top-footer .col-3 p a, footer .top-footer .col-2 ul li a {
+    color: hsl(0, 0%, 100%);
+}
+
+footer .top-footer .col-3 p {
+    margin-bottom: 10px;
+}
+
+footer .top-footer .col a:hover {
+    color: var(--primary-brand-color);
+}
+
+footer .top-footer .col-2 ul {
+    flex-direction: column;
+    align-items: start;
+}
+
+footer .top-footer .col h5 {
+    text-align: left;
+}
+
+
+/* --- */
+/* Media Queries for Responsiveness */
+/* --- */
+
+/* Burger Menu Styles (Hidden by default) */
+.burger-menu {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001; /* Ensure it's above other elements */
+}
+
+.burger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-brand-color);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Animation for burger menu icon */
+.burger-menu.open .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.burger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.open .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* Tablet and Smaller Screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    /* General adjustments */
+    .container {
+        margin: 50px 0; /* Reduce vertical margin for containers */
+    }
+
+    /* Header adjustments */
+    .top-header {
+        flex-direction: column; /* Stack header elements vertically */
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .header-email,
+    .header-info,
+    .header-socials {
+        justify-content: center; /* Center content in stacked sections */
+        width: 100%;
+        margin-bottom: 10px; /* Add some space between stacked items */
+    }
+
+    .header-socials {
+        margin-left: 0; /* Remove left margin from social icons */
+    }
+
+    .top-header .header-socials i {
+        margin: 0 10px; /* Adjust spacing between social icons */
+    }
+
+    .header {
+        flex-direction: row; /* Keep brand and burger side-by-side */
+        justify-content: space-between; /* Space between brand and burger */
+        padding: 10px 20px;
+        position: relative;
+    }
+
+    .brand img {
+        height: 60px; /* Smaller logo on tablets */
+    }
+
+    /* Show burger menu */
+    .burger-menu {
+        display: flex;
+    }
+
+    /* Hide desktop navigation */
+    .nav {
+        display: none;
+        position: fixed;
+        top: 0; /* Adjust this based on your header height to position it below */
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white overlay */
+        z-index: 999; /* Below burger, above content */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%); /* Start off-screen to the right */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Style for open navigation */
+    .nav.open {
+        transform: translateX(0); /* Slide in */
+        display: flex; /* Ensure it's displayed when open */
+    }
+
+    .nav ul {
+        flex-direction: column; /* Stack nav links vertically */
+        padding: 0; /* Remove padding from ul */
+        width: auto; /* Allow content to dictate width */
+    }
+
+    .nav ul li {
+        margin: 15px 0; /* More space between nav links */
+    }
+
+    .nav ul li a {
+        font-size: 1.5rem; /* Larger font size for mobile menu links */
+        color: var(--dark-sencondary-brand-color);
+    }
+
+    .nav ul li a:hover {
+        color: var(--primary-brand-color);
+    }
+
+    /* Hero section adjustments */
+    #hero h1 {
+        font-size: 2.5rem; /* Smaller hero heading */
+        line-height: 3.5rem;
+    }
+
+    .services {
+        min-width: unset; /* Remove fixed min-width for the animating text */
+        height: auto; /* Adjust height based on content */
+        padding: 10px 20px; /* Add some padding */
+        border-radius: 20px; /* Adjust border-radius */
+    }
+
+    /* About section adjustments */
+    #about .row {
+        flex-direction: column; /* Stack columns vertically */
+        row-gap: 30px; /* Space between stacked columns */
+    }
+
+    #about .img {
+        height: 40vh; /* Adjust image height */
+        margin-bottom: 20px;
+    }
+
+    .about-info {
+        margin-top: 20vh; /* Adjust margin-top for the info box */
+        padding: 15px;
+    }
+
+    #about h3 {
+        font-size: 2rem; /* Smaller about heading */
+        line-height: 3rem;
+    }
+
+    #about h5.ttp {
+        text-align: center; /* Center align 'The Travel Place' on smaller screens */
+    }
+
+    #about p {
+        text-align: center; /* Center align paragraphs */
+    }
+
+    #about a.btn {
+        align-self: center; /* Center the button */
+    }
+
+    /* Services section adjustments */
+    .services-card-holder {
+        flex-direction: column; /* Stack service cards vertically */
+        border-radius: 0; /* Remove border-radius for stacked cards */
+    }
+
+    .services-card-holder .card {
+        margin-bottom: 20px; /* Space between cards */
+        height: 250px; /* Adjust card height */
+    }
+
+    .services-card-holder h3,
+    .services-card-holder h5 {
+        text-align: center; /* Center text in service cards */
+    }
+
+    /* Contact section adjustments */
+    #contact .row {
+        flex-direction: column; /* Stack contact columns vertically */
+        row-gap: 30px;
+    }
+
+    #contact iframe {
+        width: 100%; /* Make iframe take full width */
+        height: 300px; /* Adjust iframe height */
+    }
+
+    #contact .contact-details p,
+    #contact .contact-details .contact-title,
+    #contact .contact-details .contact-title h5 {
+        text-align: center; /* Center align contact details */
+    }
+
+    #contact .contact-details .contact-title {
+        justify-content: center; /* Center the icon and title */
+    }
+
+    .contact-socials {
+        justify-content: center; /* Center social icons in contact section */
+    }
+
+    /* Footer adjustments */
+    footer .top-footer .row {
+        flex-direction: column; /* Stack footer columns vertically */
+        row-gap: 30px;
+    }
+
+    footer .top-footer .col {
+        align-items: center; /* Center content in footer columns */
+    }
+
+    footer .top-footer .col-1 img {
+        height: 80px; /* Adjust logo size in footer */
+    }
+
+    footer .top-footer .col-2 ul {
+        align-items: center; /* Center nav links in footer */
+    }
+
+    footer .top-footer .col-3 p {
+        text-align: center; /* Center contact info in footer */
+    }
+
+    .bottom-footer {
+        flex-direction: column; /* Stack bottom footer elements */
+        text-align: center;
+    }
+
+    .bottom-footer .col-1,
+    .bottom-footer .col-2 {
+        align-items: center; /* Center content in bottom footer */
+        margin-bottom: 10px; /* Add space between elements */
+    }
+
+    .bottom-footer .col-2 i {
+        margin: 0 8px; /* Adjust spacing for social icons */
+    }
+}
+
+/* Mobile Screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    body, p, a {
+        font-size: 0.9rem; /* Slightly smaller base font size */
+        line-height: 1.4rem;
+    }
+
+    .header-1, h1 {
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }
+
+    .header-2, h2 {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    .header-3, h3 {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+    }
+
+    .sub-header-1, h4 {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+
+    .sub-header-2, h5 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .btn {
+        padding: 12px 24px; /* Smaller button padding */
+        font-size: 0.9rem;
+    }
+
+    /* Header adjustments for smaller mobiles */
+    .top-header {
+        padding: 8px 15px;
+        text-align: center; /* Ensure text is centered */
+    }
+    .top-header .header-email p,
+    .top-header .header-info p {
+        text-align: center;
+    }
+
+    .header {
+        padding: 8px 15px;
+    }
+
+    .brand img {
+        height: 50px; /* Even smaller logo */
+    }
+
+    .nav ul li a {
+        font-size: 1.2rem; /* Smaller mobile menu links */
+    }
+
+    /* Hero section adjustments */
+    #hero h1 {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    .services {
+        font-size: 1.8rem; /* Match hero h1 size for services text */
+        line-height: 2.5rem;
+    }
+
+    /* About section adjustments */
+    #about .img {
+        height: 30vh; /* Further reduce image height */
+    }
+
+    .about-info {
+        margin-top: 15vh; /* Adjust margin-top */
+    }
+
+    #about h3 {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    /* Services section adjustments */
+    .services-card-holder .card {
+        height: 200px; /* Further reduce card height */
+        padding: 20px;
+    }
+
+    .services-card-holder h3 {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .services-card-holder h5 {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    /* Contact section adjustments */
+    #contact iframe {
+        height: 250px;
+    }
+
+    #contact .contact-details p {
+        font-size: 0.9rem;
+    }
+
+    #contact .contact-details i {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,293 @@
+/* Add these styles to your assets/css/styles.css file */
+
+/* --- */
+/* Media Queries for Responsiveness */
+/* --- */
+
+/* Tablet and Smaller Screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    /* General adjustments */
+    .container {
+        margin: 50px 0; /* Reduce vertical margin for containers */
+    }
+
+    /* Header adjustments */
+    .top-header {
+        flex-direction: column; /* Stack header elements vertically */
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .header-email,
+    .header-info,
+    .header-socials {
+        justify-content: center; /* Center content in stacked sections */
+        width: 100%;
+        margin-bottom: 10px; /* Add some space between stacked items */
+    }
+
+    .header-socials {
+        margin-left: 0; /* Remove left margin from social icons */
+    }
+
+    .top-header .header-socials i {
+        margin: 0 10px; /* Adjust spacing between social icons */
+    }
+
+    .header {
+        flex-direction: column; /* Stack brand and nav vertically */
+        padding: 10px 20px;
+        position: relative; /* Ensure sticky works correctly after re-arrangement */
+    }
+
+    .brand img {
+        height: 60px; /* Smaller logo on tablets */
+        margin-bottom: 15px; /* Space between logo and nav */
+    }
+
+    nav {
+        width: 100%; /* Make nav take full width */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav links vertically */
+        padding: 0; /* Remove padding from ul */
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Space between nav links */
+    }
+
+    /* Hero section adjustments */
+    #hero h1 {
+        font-size: 2.5rem; /* Smaller hero heading */
+        line-height: 3.5rem;
+    }
+
+    .services {
+        min-width: unset; /* Remove fixed min-width for the animating text */
+        height: auto; /* Adjust height based on content */
+        padding: 10px 20px; /* Add some padding */
+        border-radius: 20px; /* Adjust border-radius */
+    }
+
+    /* About section adjustments */
+    #about .row {
+        flex-direction: column; /* Stack columns vertically */
+        row-gap: 30px; /* Space between stacked columns */
+    }
+
+    #about .img {
+        height: 40vh; /* Adjust image height */
+        margin-bottom: 20px;
+    }
+
+    .about-info {
+        margin-top: 20vh; /* Adjust margin-top for the info box */
+        padding: 15px;
+    }
+
+    #about h3 {
+        font-size: 2rem; /* Smaller about heading */
+        line-height: 3rem;
+    }
+
+    #about h5.ttp {
+        text-align: center; /* Center align 'The Travel Place' on smaller screens */
+    }
+
+    #about p {
+        text-align: center; /* Center align paragraphs */
+    }
+
+    #about a.btn {
+        align-self: center; /* Center the button */
+    }
+
+    /* Services section adjustments */
+    .services-card-holder {
+        flex-direction: column; /* Stack service cards vertically */
+        border-radius: 0; /* Remove border-radius for stacked cards */
+    }
+
+    .services-card-holder .card {
+        margin-bottom: 20px; /* Space between cards */
+        height: 250px; /* Adjust card height */
+    }
+
+    .services-card-holder h3,
+    .services-card-holder h5 {
+        text-align: center; /* Center text in service cards */
+    }
+
+    /* Contact section adjustments */
+    #contact .row {
+        flex-direction: column; /* Stack contact columns vertically */
+        row-gap: 30px;
+    }
+
+    #contact iframe {
+        width: 100%; /* Make iframe take full width */
+        height: 300px; /* Adjust iframe height */
+    }
+
+    #contact .contact-details p,
+    #contact .contact-details .contact-title,
+    #contact .contact-details .contact-title h5 {
+        text-align: center; /* Center align contact details */
+    }
+
+    #contact .contact-details .contact-title {
+        justify-content: center; /* Center the icon and title */
+    }
+
+    .contact-socials {
+        justify-content: center; /* Center social icons in contact section */
+    }
+
+    /* Footer adjustments */
+    footer .top-footer .row {
+        flex-direction: column; /* Stack footer columns vertically */
+        row-gap: 30px;
+    }
+
+    footer .top-footer .col {
+        align-items: center; /* Center content in footer columns */
+    }
+
+    footer .top-footer .col-1 img {
+        height: 80px; /* Adjust logo size in footer */
+    }
+
+    footer .top-footer .col-2 ul {
+        align-items: center; /* Center nav links in footer */
+    }
+
+    footer .top-footer .col-3 p {
+        text-align: center; /* Center contact info in footer */
+    }
+
+    .bottom-footer {
+        flex-direction: column; /* Stack bottom footer elements */
+        text-align: center;
+    }
+
+    .bottom-footer .col-1,
+    .bottom-footer .col-2 {
+        align-items: center; /* Center content in bottom footer */
+        margin-bottom: 10px; /* Add space between elements */
+    }
+
+    .bottom-footer .col-2 i {
+        margin: 0 8px; /* Adjust spacing for social icons */
+    }
+}
+
+/* Mobile Screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    body, p, a {
+        font-size: 0.9rem; /* Slightly smaller base font size */
+        line-height: 1.4rem;
+    }
+
+    .header-1, h1 {
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }
+
+    .header-2, h2 {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    .header-3, h3 {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+    }
+
+    .sub-header-1, h4 {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+
+    .sub-header-2, h5 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .btn {
+        padding: 12px 24px; /* Smaller button padding */
+        font-size: 0.9rem;
+    }
+
+    /* Header adjustments for smaller mobiles */
+    .top-header {
+        padding: 8px 15px;
+    }
+
+    .header {
+        padding: 8px 15px;
+    }
+
+    .brand img {
+        height: 50px; /* Even smaller logo */
+    }
+
+    nav ul li a {
+        font-size: 0.9rem; /* Smaller nav links */
+    }
+
+    /* Hero section adjustments */
+    #hero h1 {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    .services {
+        font-size: 1.8rem; /* Match hero h1 size for services text */
+        line-height: 2.5rem;
+    }
+
+    /* About section adjustments */
+    #about .img {
+        height: 30vh; /* Further reduce image height */
+    }
+
+    .about-info {
+        margin-top: 15vh; /* Adjust margin-top */
+    }
+
+    #about h3 {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    /* Services section adjustments */
+    .services-card-holder .card {
+        height: 200px; /* Further reduce card height */
+        padding: 20px;
+    }
+
+    .services-card-holder h3 {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .services-card-holder h5 {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    /* Contact section adjustments */
+    #contact iframe {
+        height: 250px;
+    }
+
+    #contact .contact-details p {
+        font-size: 0.9rem;
+    }
+
+    #contact .contact-details i {
+        font-size: 1.2rem;
+    }
+}
