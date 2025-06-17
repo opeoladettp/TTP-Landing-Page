@@ -229,6 +229,7 @@ span.services {
     position: relative;
     overflow: hidden;
     vertical-align: middle;
+    padding: 10px;
 }
 
 /* New fade animation classes */
@@ -436,6 +437,21 @@ span.services {
 .services-card-holder .card {
     justify-content: end;
     padding: 30px;
+}
+
+#under-construction {
+    background: var(--primary-brand-color);
+    height: auto;
+}
+
+#under-construction h1 {
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+}
+
+#under-construction h4 {
+    color: hsl(0, 0%, 0%);
+    text-align: center;
 }
 
 #contact .row {
