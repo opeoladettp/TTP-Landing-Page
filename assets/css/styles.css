@@ -642,6 +642,10 @@ footer .top-footer .col h5 {
         display: flex;
     }
 
+    .header.sticky .burger-menu {
+        margin-right: 16px;
+    }
+
     /* Hide desktop navigation */
     .nav {
         display: none;
@@ -778,9 +782,13 @@ footer .top-footer .col h5 {
     }
 
     /* Footer adjustments */
-    footer .top-footer .row {
+    footer .top-footer {
         flex-direction: column; /* Stack footer columns vertically */
         row-gap: 30px;
+    }
+    
+    footer .top-footer .col h5 {
+        text-align: center;
     }
 
     footer .top-footer .col {
