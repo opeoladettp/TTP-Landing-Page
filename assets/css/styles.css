@@ -866,6 +866,11 @@ footer .top-footer .col h5 {
         padding: 8px 15px;
         text-align: center; /* Ensure text is centered */
     }
+
+    .top-header .header-info p, .top-header .header-info a {
+        font-size: 10px;
+    }
+
     .top-header .header-email p,
     .top-header .header-info p {
         text-align: center;
