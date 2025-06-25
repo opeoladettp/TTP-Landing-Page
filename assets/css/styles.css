@@ -707,6 +707,10 @@ footer .top-footer .col h5 {
         row-gap: 30px; /* Space between stacked columns */
     }
 
+    #about {
+        height: auto;
+    }
+
     #about .img {
         height: 40vh; /* Adjust image height */
         margin-bottom: 20px;
